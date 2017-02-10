@@ -1,0 +1,44 @@
+{
+  "name": "fun-state-machine",
+  "version": "0.1.0",
+  "description": "A functional state machine",
+  "main": "src/index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "tap -Rtap --coverage-report=text-summary ./test/index.js",
+    "predependencies": "mkdir -p img",
+    "dependencies": "madge . --image img/dependencies.svg -x 'test|coverage|docs'",
+    "predependencies-test": "mkdir -p img",
+    "dependencies-test": "madge . --image img/dependencies-test.svg -x 'coverage|docs'",
+    "coverage": "tap --coverage-report=lcov ./test/index.js",
+    "pages-index": "showdown makehtml -i README.md -o public/index.html",
+    "pages": "./script/pages.sh",
+    "lint": "eslint --ignore-path .gitignore --fix .",
+    "document": "jsdoc --destination docs -c .jsdoc.json -r",
+    "readme": "cat readme/* > README.md"
+  },
+  "author": "bagrounds@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "data.task": "^3.1.1",
+    "eslint": "^3.13.1",
+    "jsdoc": "^3.4.3",
+    "madge": "^1.6.0",
+    "showdown": "^1.6.4",
+    "tap": "^10.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/bagrounds/fun-state-machine.git"
+  },
+  "keywords": [
+    "fun",
+    "predicate"
+  ],
+  "author": "bagrounds@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/bagrounds/fun-state-machine/issues"
+  },
+  "homepage": "https://gitlab.com/bagrounds/fun-state-machine#README"
+}
