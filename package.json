@@ -1,6 +1,6 @@
 {
   "name": "fun-state-machine",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A functional state machine",
   "main": "src/index.js",
   "scripts": {
@@ -36,8 +36,6 @@
     "fun",
     "predicate"
   ],
-  "author": "bagrounds@gmail.com",
-  "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/bagrounds/fun-state-machine/issues"
   },
