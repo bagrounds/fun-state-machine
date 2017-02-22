@@ -30,13 +30,12 @@
    * @param {Object} options - all function parameters
    * @param {Function} input - State -> Input
    * @param {Function} action - Input -> Task Output
-   * @param {Function} update - State -> Output -> State
+   * @param {Function} update - Output -> State -> State
    * @return {Function} State -> Task State
    */
   function makeTransition (options) {
     return function (state) {
-      return options.action(options.input(state))
-        .map(options.update(state))
+      return options.update(options.action(options.input(state)))(state)
     }
   }
 
