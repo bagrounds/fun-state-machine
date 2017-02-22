@@ -27,6 +27,8 @@
 
   /**
    *
+   * @function module:fun-state-machine.makeTransition
+   *
    * @param {Object} options - all function parameters
    * @param {Function} input - State -> Input
    * @param {Function} action - Input -> Task Output
@@ -40,6 +42,8 @@
   }
 
   /**
+   *
+   * @function module:fun-state-machine.run
    *
    * @param {Object} options - all function parameters
    * @param {Function} machine - State -> Task State
