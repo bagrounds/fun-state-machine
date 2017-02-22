@@ -1,6 +1,6 @@
 {
   "name": "fun-state-machine",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A functional state machine",
   "main": "src/index.js",
   "scripts": {
