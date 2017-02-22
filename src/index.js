@@ -5,6 +5,9 @@
 ;(function () {
   'use strict'
 
+  /* imports */
+  var Task = require('data.task')
+
   /* exports */
   module.exports = funStateMachine
   module.exports.makeTransition = makeTransition
@@ -37,7 +40,11 @@
    */
   function makeTransition (options) {
     return function (state) {
-      return options.update(options.action(options.input(state)))(state)
+      return Task.of(state)
+        .map(options.input)
+        .chain(options.action)
+        .map(options.update)
+        .ap(Task.of(state))
     }
   }
 

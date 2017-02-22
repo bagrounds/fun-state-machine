@@ -39,5 +39,8 @@
   "bugs": {
     "url": "https://gitlab.com/bagrounds/fun-state-machine/issues"
   },
-  "homepage": "https://gitlab.com/bagrounds/fun-state-machine#README"
+  "homepage": "https://gitlab.com/bagrounds/fun-state-machine#README",
+  "dependencies": {
+    "data.task": "^3.1.1"
+  }
 }
